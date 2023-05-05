@@ -2,7 +2,7 @@ import React from 'react'
 
 interface SortButtonProps {
     sortOrder: "asc" | "desc"
-    toggleSortOrder: () => void;
+    toggleSortOrder: () => void
 }
 
 const SortButton: React.FC<SortButtonProps> = ({ sortOrder, toggleSortOrder }) => {

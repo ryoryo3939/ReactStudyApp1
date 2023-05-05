@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import HomePage from "./page/HomePage";
+import HomePage from "./page/HomePage"
 
 
 const RouterConfig: React.FC = () => {
@@ -11,7 +11,7 @@ const RouterConfig: React.FC = () => {
                 {/* 他のルートをここに追加 */}
             </Routes>
         </BrowserRouter>
-    );
-};
+    )
+}
 
 export default RouterConfig

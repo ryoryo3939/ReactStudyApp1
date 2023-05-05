@@ -1,12 +1,12 @@
-import React from 'react';
-import { useDrag, useDrop } from 'react-dnd';
+import React from 'react'
+import { useDrag, useDrop } from 'react-dnd'
 
 interface NoteItemProps {
-    id: string;
-    content: string;
-    index: number;
-    moveNote: (dragIndex: number, hoverIndex: number) => void;
-    deleteNote: (id: string) => void;
+    id: string
+    content: string
+    index: number
+    moveNote: (dragIndex: number, hoverIndex: number) => void
+    deleteNote: (id: string) => void
 }
 
 const NoteItem: React.FC<NoteItemProps> = ({ id, content, index, moveNote, deleteNote }) => {
@@ -16,19 +16,19 @@ const NoteItem: React.FC<NoteItemProps> = ({ id, content, index, moveNote, delet
         collect: (monitor) => ({
             isDragging: monitor.isDragging(),
         }),
-    }));
+    }))
 
     const [, drop] = useDrop(() => ({
         accept: 'note',
         hover(item: { id: string; index: number }, monitor) {
             if (item.index === index) {
-                return;
+                return
             }
 
-            moveNote(item.index, index);
-            item.index = index;
+            moveNote(item.index, index)
+            item.index = index
         },
-    }));
+    }))
 
     return (
         <li
@@ -44,4 +44,4 @@ const NoteItem: React.FC<NoteItemProps> = ({ id, content, index, moveNote, delet
     );
 };
 
-export default NoteItem;
+export default NoteItem
