@@ -1,5 +1,5 @@
 import React from 'react'
-import RouterConfig from "./RouterConfig";
+import RouterConfig from "./RouterConfig"
 
 const App: React.FC = () => {
     return (
